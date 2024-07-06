@@ -10,7 +10,20 @@ This project is Designed with custom lightweight PHP framework to handle a RESTf
 ```
 git clone https://github.com/MahmudsGit/product-review.git
 ```
--  create a new database and configure with `confif/database.php`. for exapmple :
+-  create a new database for exapmple :
+```html
+    CREATE DATABASE product_reviews_db;
+    USE product_reviews_db;
+    
+    CREATE TABLE product_reviews (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        product_id INT NOT NULL,
+        user_id INT NOT NULL,
+        review_text TEXT NOT NULL,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    );
+```
+-  connect databse with `confif/database.php`. for exapmple :
 ```html
     'host' => 'localhost',
     'database' => 'product_reviews_db',
@@ -40,7 +53,8 @@ http://localhost:8000/review
 ```
 **type**: `POST`
 
-**view response**
+
+> all set! Now view response.
 
 ##
 
